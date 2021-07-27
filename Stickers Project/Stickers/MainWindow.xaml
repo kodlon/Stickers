@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stickers"
         mc:Ignorable="d"
-        Title="Stickers v0.2" Height="260" Width="230" ResizeMode="NoResize">
+        Title="Stickers v0.2" Height="260" Width="230" ResizeMode="CanResize" MaxWidth="230" MinHeight="260" MinWidth="230">
     <!--<Window.Resources>
         <ControlTemplate x:Key="itemTemplate" TargetType="GroupBox">
             <GroupBox HorizontalAlignment="Center">
