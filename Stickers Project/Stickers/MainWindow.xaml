@@ -1,0 +1,33 @@
+﻿<Window x:Class="Stickers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Stickers"
+        mc:Ignorable="d"
+        Title="Stickers v0.2" Height="260" Width="230" ResizeMode="NoResize">
+    <!--<Window.Resources>
+        <ControlTemplate x:Key="itemTemplate" TargetType="GroupBox">
+            <GroupBox HorizontalAlignment="Center">
+                <Grid>
+                    <CheckBox HorizontalAlignment="Left" Margin="3,6,0,0" VerticalAlignment="Top" Width="16"/>
+                    <TextBox HorizontalAlignment="Left" Margin="25,5,0,5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
+                    <Button HorizontalAlignment="Left" Margin="170,0,0,0" Height="17" Width="26" Content="Del" FontSize="11" Click="Button_Click" />
+                </Grid>
+            </GroupBox>
+        </ControlTemplate>
+    </Window.Resources>-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.9*"/>
+            <RowDefinition Height="0.1*"/>
+        </Grid.RowDefinitions>
+    <StackPanel x:Name="listOfItems" Grid.Column="0" Grid.Row="0">
+        <!--<GroupBox Template = "{StaticResource itemTemplate}" />-->
+    </StackPanel>
+        <Button Grid.Column="0" Grid.Row="1" Content="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click_1"/>
+    </Grid>
+</Window>
