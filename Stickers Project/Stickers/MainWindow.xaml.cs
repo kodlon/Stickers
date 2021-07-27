@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace Stickers
 {
@@ -15,7 +16,6 @@ namespace Stickers
             InitializeComponent();
 
             AddNewItemToStack(idItem);
-
         }
 
         /// <summary>
@@ -44,6 +44,11 @@ namespace Stickers
             textBox.Text = "";
             textBox.VerticalAlignment = VerticalAlignment.Top;
             textBox.Width = 140;
+            textBox.Focusable = true;
+            textBox.KeyDown += textBoxKeyDown;
+
+            //textBox.Focus();
+            //Keyboard.Focus(textBox);
 
             button.HorizontalAlignment = HorizontalAlignment.Left;
             button.Margin = new Thickness(170, 0, 0, 0);
@@ -62,6 +67,12 @@ namespace Stickers
             listOfItems.Children.Add(groupBox);
 
             idItem++;
+        }
+
+        private void textBoxKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+                AddNewItemToStack(idItem);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
