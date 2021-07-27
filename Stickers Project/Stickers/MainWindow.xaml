@@ -5,20 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stickers"
         mc:Ignorable="d"
-        Title="Stickers v0.2" Height="260" Width="230" ResizeMode="CanResize" MaxWidth="230" MinHeight="260" MinWidth="230">
+        Title="Stickers v0.31" Height="260" Width="230" ResizeMode="CanResize" MaxWidth="230" MinHeight="260" MinWidth="230">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.1*" MaxHeight="25"/>
             <RowDefinition Height="0.9*"/>
-            <RowDefinition Height="0.1*"/>
+            <RowDefinition Height="0.1*" MaxHeight="25"/>
         </Grid.RowDefinitions>
         <TextBox x:Name="stickerName" Text="Name of your sticker here" ToolTip="Name of your sticker here" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0" GotFocus="stickerName_GotFocus" LostFocus="stickerName_LostFocus" BorderBrush="White" />
-        <StackPanel x:Name="listOfItems" Grid.Column="0" Grid.Row="1">
+        <ScrollViewer Grid.Column="0" Grid.Row="1" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" Width="220" >
+            <StackPanel x:Name="listOfItems" Grid.Column="0" Grid.Row="1">
             
-        </StackPanel>
-        <Button Grid.Column="0" Grid.Row="2" Content="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click_1"/>
+            </StackPanel>
+            
+        </ScrollViewer>
+        <Button Grid.Column="0" Grid.Row="2" Content="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click_1" MaxHeight="25"/>
     </Grid>
 </Window>
