@@ -75,5 +75,17 @@ namespace Stickers
         {
             AddNewItemToStack(idItem);
         }
+
+        private void stickerName_GotFocus(object sender, RoutedEventArgs e)
+        {
+            if (stickerName.Text == "Name of your sticker here")
+                stickerName.Text = "";
+        }
+
+        private void stickerName_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (stickerName.Text == "")
+                stickerName.Text = "Name of your sticker here";
+        }
     }
 }
