@@ -6,17 +6,6 @@
         xmlns:local="clr-namespace:Stickers"
         mc:Ignorable="d"
         Title="Stickers v0.2" Height="260" Width="230" ResizeMode="CanResize" MaxWidth="230" MinHeight="260" MinWidth="230">
-    <!--<Window.Resources>
-        <ControlTemplate x:Key="itemTemplate" TargetType="GroupBox">
-            <GroupBox HorizontalAlignment="Center">
-                <Grid>
-                    <CheckBox HorizontalAlignment="Left" Margin="3,6,0,0" VerticalAlignment="Top" Width="16"/>
-                    <TextBox HorizontalAlignment="Left" Margin="25,5,0,5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="140"/>
-                    <Button HorizontalAlignment="Left" Margin="170,0,0,0" Height="17" Width="26" Content="Del" FontSize="11" Click="Button_Click" />
-                </Grid>
-            </GroupBox>
-        </ControlTemplate>
-    </Window.Resources>-->
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -28,7 +17,7 @@
         </Grid.RowDefinitions>
         <TextBox x:Name="stickerName" Text="Name of your sticker here" ToolTip="Name of your sticker here" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0" Grid.Row="0" GotFocus="stickerName_GotFocus" LostFocus="stickerName_LostFocus" BorderBrush="White" />
         <StackPanel x:Name="listOfItems" Grid.Column="0" Grid.Row="1">
-            <!--<GroupBox Template = "{StaticResource itemTemplate}" />-->
+            
         </StackPanel>
         <Button Grid.Column="0" Grid.Row="2" Content="+" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="Button_Click_1"/>
     </Grid>
