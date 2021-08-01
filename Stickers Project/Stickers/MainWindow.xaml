@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stickers"
         mc:Ignorable="d"
-        Title="Stickers v0.31" Height="260" Width="230" ResizeMode="CanResize" MaxWidth="230" MinHeight="260" MinWidth="230">
+        x:Name="MainSticker" Title="Stickers v0.4" Height="260" Width="230" ResizeMode="CanResize" MaxWidth="230" MinHeight="260" MinWidth="230" Closing="MainSticker_Closing" Closed="MainSticker_Closed">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
